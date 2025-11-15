@@ -1,3 +1,7 @@
 # Spelltdown
 
-## Created by Thomas Nguyen, Nathan Ramirez, Benedict Ignacio, and Kian Heydari Marvi
+## Team Members
+- Thomas Nguyen - Programmer/Artist
+- Nathan Ramirez - Programmer
+- Benedict Ignacio - Programmer
+- Kian Heydari Marvi - Audio/Sound Design
