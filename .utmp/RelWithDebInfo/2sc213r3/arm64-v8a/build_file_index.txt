@@ -1,0 +1,2 @@
+C:\Users\nater\Meta-XR-All-in-one-SDK-Template\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\nater\Meta-XR-All-in-one-SDK-Template\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
