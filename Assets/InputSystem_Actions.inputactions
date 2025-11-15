@@ -7,24 +7,6 @@
             "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
             "actions": [
                 {
-                    "name": "LeftTriggerPress",
-                    "type": "Button",
-                    "id": "b5e0a589-5ff1-49e6-9d70-30bbe5988f69",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RightTriggerPress",
-                    "type": "Button",
-                    "id": "20b48517-2564-402f-89e8-d003b7fc5df7",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Move",
                     "type": "Value",
                     "id": "351f2ccd-1f9f-44bf-9bec-d62ac5c5f408",
@@ -489,28 +471,6 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "27b3d764-649e-43d7-ac40-66e31b0d8f22",
-                    "path": "<XRController>/trigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";XR",
-                    "action": "LeftTriggerPress",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6f3f58ba-9142-4108-a651-733cd3c3c50f",
-                    "path": "<XRController>/trigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";XR",
-                    "action": "RightTriggerPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1033,28 +993,48 @@
             ]
         },
         {
-            "name": "New action map",
-            "id": "6b4a3e87-4b17-475a-ba54-b55c7ca13e5d",
+            "name": "XRInput",
+            "id": "1013c8f2-f02b-42e6-b0ba-453669660af3",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "TriggerPressLeft",
                     "type": "Button",
-                    "id": "6fee6dbf-8ca4-418e-8096-b7a7b7ffce04",
+                    "id": "07dbcb70-d247-47ae-abc5-59d78107d607",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TriggerPressRight",
+                    "type": "Button",
+                    "id": "5f6bc7f8-603c-4f23-9ba7-b92949747654",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "5f5cbc44-faee-4cb7-818c-a8ced10dd8ef",
-                    "path": "",
+                    "id": "9611e892-91d5-41f4-a776-db2b6e88f19c",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "TriggerPressLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "538679ea-ffa1-4e24-98b5-319a8f44c031",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TriggerPressRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
