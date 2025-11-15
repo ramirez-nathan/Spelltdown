@@ -1049,19 +1049,19 @@ MonoBehaviour:
   LicenseName: 
   LicenseKey: 
   LicenseFilePath: 
-  GestureDatabaseFile: StreamingAssets/Sample_OneHanded_MyGestures.dat
+  GestureDatabaseFile: GestureRecognition/Sample_OneHanded_MyGestures.dat
   unityXrPlugin: 0
   mivryCoordinateSystem: 0
   LeftHand: {fileID: 1417574637}
-  LeftTriggerInput: <XRController>/trigger
+  LeftTriggerInput: 
   LeftTriggerInputType: 0
   LeftTriggerValue: 0
-  LeftTriggerThreshold: 0.9
+  LeftTriggerThreshold: 0.5
   RightHand: {fileID: 83112252}
-  RightTriggerInput: <XRController>/trigger
+  RightTriggerInput: 
   RightTriggerInputType: 0
   RightTriggerValue: 0
-  RightTriggerThreshold: 0.9
+  RightTriggerThreshold: 0.5
   ContinuousGestureRecognition: 0
   ContinuousGesturePeriod: 1000
   ContinuousGestureSmoothing: 3
@@ -1204,7 +1204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2030432238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,38 +1267,6 @@ MonoBehaviour:
     m_ActionId: 641cd816-40e6-41b4-8c3d-04687c349290
     m_ActionName: 'Player/Sprint[/Keyboard/leftShift]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1428354636}
-        m_TargetAssemblyTypeName: Mivry, Assembly-CSharp
-        m_MethodName: OnInputAction_LeftTrigger
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b5e0a589-5ff1-49e6-9d70-30bbe5988f69
-    m_ActionName: Player/LeftTriggerPress
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1428354636}
-        m_TargetAssemblyTypeName: Mivry, Assembly-CSharp
-        m_MethodName: OnInputAction_RightTrigger
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 20b48517-2564-402f-89e8-d003b7fc5df7
-    m_ActionName: Player/RightTriggerPress
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: c95b2375-e6d9-4b88-9c4c-c5e76515df4b
     m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
@@ -1339,12 +1307,40 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6fee6dbf-8ca4-418e-8096-b7a7b7ffce04
-    m_ActionName: New action map/New action
+      m_Calls:
+      - m_Target: {fileID: 1428354636}
+        m_TargetAssemblyTypeName: Mivry, Assembly-CSharp
+        m_MethodName: OnInputAction_LeftTrigger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 07dbcb70-d247-47ae-abc5-59d78107d607
+    m_ActionName: XRInput/TriggerPressLeft
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1428354636}
+        m_TargetAssemblyTypeName: Mivry, Assembly-CSharp
+        m_MethodName: OnInputAction_RightTrigger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5f6bc7f8-603c-4f23-9ba7-b92949747654
+    m_ActionName: XRInput/TriggerPressRight
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: XR
-  m_DefaultActionMap: Player
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &2030432239
