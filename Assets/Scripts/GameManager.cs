@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameState state;
-    public Score scoreDisplay;
+    public Score scoreScript;
     public GameObject menuCanvas;
     public GameObject playCanvas;
     public GameObject gameOverCanvas;
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         elapsedTime += Time.deltaTime;
-        scoreDisplay.displayScore();
+        scoreScript.displayScore();
         
         if (score > highScore)
         {
@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
         menuCanvas.SetActive(true);
         playCanvas.SetActive(false);
         gameOverCanvas.SetActive(false);
+        runeSpawner.SetActive(false);
     }
 
     public void GoToPlay()
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
         menuCanvas.SetActive(false);
         playCanvas.SetActive(true);
         gameOverCanvas.SetActive(false);
+        runeSpawner.SetActive(true);
     }
 
     public void GoToGameOver()
@@ -70,6 +72,7 @@ public class GameManager : MonoBehaviour
         menuCanvas.SetActive(false);
         playCanvas.SetActive(false);
         gameOverCanvas.SetActive(true);
+        runeSpawner.SetActive(false);
     }
 }
 
