@@ -2091,6 +2091,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  InputAction_LeftTriggerPressed: 0
+  InputAction_RightTriggerPressed: 0
 --- !u!4 &1320196671
 Transform:
   m_ObjectHideFlags: 0
@@ -3482,6 +3484,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 087721677594ee04483b562ba76a1174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recordingGesture: 0
+  mivry: {fileID: 0}
+  isTrackingRight: 0
 --- !u!4 &2092966048
 Transform:
   m_ObjectHideFlags: 0
