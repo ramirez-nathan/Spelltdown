@@ -1529,7 +1529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a2f93b51e1e494381d5aa58bfaaabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawTip: {fileID: 0}
+  drawTip: {fileID: 1737994256}
   lineRenderer: {fileID: 2130866557}
   minDistance: 0.015
 --- !u!4 &2130866559
