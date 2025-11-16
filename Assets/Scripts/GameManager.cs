@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public int highScore = 0;
     public float timeWindow = 5.0f;
     public float elapsedTime = 0.0f;
+
     private void Awake()
     {
         instance = this;
