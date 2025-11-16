@@ -19,30 +19,44 @@ public class GestureEventProcessor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch) && !recordingGesture)
+        bool lefttriggerDown = OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch);
+        bool lefttriggerUp = OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch);
+        bool righttriggerDown = OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch);
+        bool righttriggerUp = OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch);
+
+        if (righttriggerDown && !recordingGesture)
         {
             recordingGesture = true;
             mivry.InputAction_RightTriggerPressed = true;
             isTrackingRight = true;
         }
-        else if (OVRInput.GetUp(OVRInput.Button.One, OVRInput.Controller.RTouch) && recordingGesture
+        else if (righttriggerUp && recordingGesture
                 && isTrackingRight)
         {
             recordingGesture = false;
             mivry.InputAction_RightTriggerPressed = false;
             isTrackingRight = false;
         }
-        else if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.LTouch) && !recordingGesture)
+        else if (lefttriggerDown && !recordingGesture)
         {
             recordingGesture = true;
             mivry.InputAction_LeftTriggerPressed = true;
             isTrackingRight = false; // Explicitly set to false for left hand
         }
-        else if (OVRInput.GetUp(OVRInput.Button.One, OVRInput.Controller.LTouch) && recordingGesture
+        else if (lefttriggerUp && recordingGesture
                 && !isTrackingRight)
         {
             recordingGesture = false;
             mivry.InputAction_LeftTriggerPressed = false;
+        }
+        if (OVRInput.GetDown(OVRInput.Button.Two, OVRInput.Controller.LTouch) && runeQueue.Count > 0) 
+        {
+            foreach (var rune in runeQueue)
+            {
+                Rune runeScript = runeQueue.Peek().GetComponent<Rune>();
+                runeQueue.Dequeue();
+                runeScript.HandleDispell();
+            }
         }
     }
 

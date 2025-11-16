@@ -50,7 +50,7 @@ public class RuneSpawner : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
 
             // Generate a random integer between 1 and 100 (inclusive)
-            int randomNumberInRange = Random.Range(0,2);
+            int randomNumberInRange = Random.Range(0,3);
             RuneType runeType;
             if (randomNumberInRange == 0)
             { // circle 

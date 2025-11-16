@@ -7,7 +7,7 @@ public class ScreenshotMaker : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetButtonDown("Submit"))
+        /*if (Input.GetButtonDown("Submit"))
         {
             var dir = Directory.GetParent((Application.dataPath)).ToString();
             int counter = 0;
@@ -25,7 +25,7 @@ public class ScreenshotMaker : MonoBehaviour
                     return;
                 }
             }
-        }
+        }*/
     }
 }
 #endif

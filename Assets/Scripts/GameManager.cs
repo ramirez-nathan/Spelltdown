@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameState state;
-    public Score scoreScript;
+    //public Score scoreScript;
     public GameObject menuCanvas;
     public GameObject playCanvas;
     public GameObject gameOverCanvas;
@@ -15,11 +15,17 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     public int highScore = 0;
-    public float timeWindow = 5.0f;
+    //public float timeWindow = 5.0f;
     public float elapsedTime = 0.0f;
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+
+            // Works only for root GameObject
+            DontDestroyOnLoad(gameObject);
+        }
         GoToMenu();
     }
 
@@ -33,23 +39,17 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         elapsedTime += Time.deltaTime;
-        scoreScript.displayScore();
-        
-        if (score > highScore)
+        //scoreScript.displayScore();
+        // if status bar <= 0, gotogameover()
+        /*if (score > highScore)
         {
             highScore = score;
-        }
-        if (elapsedTime > timeWindow)
-        {
-            elapsedTime = 0.0f;
-            GoToGameOver();
-        }
+        }*/
     }
 
     public void GoToMenu()
     {
         state = GameState.MENU;
-        runeSpawner.SetActive(true);
         score = 0;
         menuCanvas.SetActive(true);
         playCanvas.SetActive(false);
