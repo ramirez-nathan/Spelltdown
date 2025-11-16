@@ -69,6 +69,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.UIElements;
 using static GestureCompletionData;
+using static OVRPlugin;
+
 #endif
 #if UNITY_ANDROID
 using UnityEngine.Networking;
@@ -396,7 +398,7 @@ public class Mivry : MonoBehaviour
     /// </summary>
     /// <param name="callbackContext">The InputAction CallbackContext</param>
     public void OnInputAction_LeftTriggerPress(InputAction.CallbackContext callbackContext)
-    {
+    { 
         this.InputAction_LeftTriggerPressed = true;
     }
 
@@ -458,6 +460,7 @@ public class Mivry : MonoBehaviour
     /// <param name="callbackContext">The InputAction CallbackContext</param>
     public void OnInputAction_RightTriggerPress(InputAction.CallbackContext callbackContext)
     {
+
         this.InputAction_RightTriggerPressed = true;
     }
 
@@ -480,12 +483,13 @@ public class Mivry : MonoBehaviour
         this.InputAction_RightTriggerPressed = false;
     }
 
-    private bool InputAction_LeftTriggerPressed = false;
+    public bool InputAction_LeftTriggerPressed = false;
 
-    private bool InputAction_RightTriggerPressed = false;
+    public bool InputAction_RightTriggerPressed = false;
     
     public float getInputControlValue(string controlName)
     {
+        Debug.Log("[GestureRecognition] Getting Input control value");
         InputControl control = InputSystem.FindControl(controlName); // eg: "<XRController>{RightHand}/trigger"
         if (control == null) {
             Debug.LogError($"Mivry.getInputControlValue : Control '{controlName}' not found.");
@@ -545,6 +549,13 @@ public class Mivry : MonoBehaviour
     /// </summary>
     void Start()
     {
+        //------------ NEW CODE:
+        
+        Debug.Log("[MiVRyTest] StreamingAssets path: " + Application.streamingAssetsPath);
+        Debug.Log("[MiVRyTest] Gesture file set in Mivry: " + GestureDatabaseFile);
+
+        //------------ END OF NEW CODE
+
         int ret;
 #if UNITY_EDITOR
         // When running the scene inside the Unity editor,
