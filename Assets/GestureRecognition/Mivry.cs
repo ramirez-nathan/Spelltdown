@@ -483,9 +483,9 @@ public class Mivry : MonoBehaviour
         this.InputAction_RightTriggerPressed = false;
     }
 
-    private bool InputAction_LeftTriggerPressed = false;
+    public bool InputAction_LeftTriggerPressed = false;
 
-    private bool InputAction_RightTriggerPressed = false;
+    public bool InputAction_RightTriggerPressed = false;
     
     public float getInputControlValue(string controlName)
     {
