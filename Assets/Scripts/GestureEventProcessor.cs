@@ -44,6 +44,15 @@ public class GestureEventProcessor : MonoBehaviour
             recordingGesture = false;
             mivry.InputAction_LeftTriggerPressed = false;
         }
+        if (OVRInput.GetDown(OVRInput.Button.Two, OVRInput.Controller.LTouch) && runeQueue.Count > 0) 
+        {
+            foreach (var rune in runeQueue)
+            {
+                Rune runeScript = runeQueue.Peek().GetComponent<Rune>();
+                runeQueue.Dequeue();
+                runeScript.HandleDispell();
+            }
+        }
     }
 
     public void AddRuneToQueue(GameObject rune) 
