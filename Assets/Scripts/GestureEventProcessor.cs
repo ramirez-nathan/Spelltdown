@@ -9,6 +9,7 @@ public class GestureEventProcessor : MonoBehaviour
     public bool recordingGesture = false;
     public Mivry mivry;
     Queue<GameObject> runeQueue = new Queue<GameObject>();
+    public GameObject runeParticlePrefab;
     public bool isTrackingRight;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -120,6 +121,7 @@ public class GestureEventProcessor : MonoBehaviour
     public void DispellRune()
     {
         Rune runeScript = runeQueue.Peek().GetComponent<Rune>();
+        StartCoroutine(PlayRuneEffect(1.0f, runeQueue.Peek().transform));
         runeQueue.Dequeue();
         runeScript.HandleDispell();
     }
@@ -140,5 +142,12 @@ public class GestureEventProcessor : MonoBehaviour
             OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
             OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
         }
+    }
+
+    private IEnumerator PlayRuneEffect(float seconds, Transform position)
+    {
+        GameObject runeParticle = Instantiate(runeParticlePrefab, position.position, transform.rotation);
+        yield return new WaitForSeconds(seconds);
+        Destroy(runeParticle);
     }
 }

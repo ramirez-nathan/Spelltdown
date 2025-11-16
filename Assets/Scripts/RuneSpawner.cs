@@ -81,8 +81,8 @@ public class RuneSpawner : MonoBehaviour
             Debug.LogWarning("No spawn points assigned!");
             return;
         }
-
-        GameObject rune = Instantiate(RunePrefab, spawnPoint.position, transform.rotation);
+        Vector3 adjustedSpawnPos = spawnPoint.position + new Vector3(0f, 0.56f, 0f);
+        GameObject rune = Instantiate(RunePrefab, adjustedSpawnPos, transform.rotation);
         rune.GetComponent<Rune>().SetRuneType(runeType);
         Debug.Log($"I am born as rune! {rune.GetComponent<Rune>().type}");
         gestureEventProcessor.AddRuneToQueue(rune);
