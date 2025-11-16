@@ -9,8 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Nathan/PluginTestScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+<<<<<<< HEAD
+    path: Assets/Scenes/teejay-nguyen/PluginTestScene.unity
+    guid: c266bcf0bf1bf4744ad4f2d83f1bd19e
+=======
     path: Assets/Scenes/Nathan/Dungeon_Demo.unity
     guid: a1b8d6ebca82cc64ba3f8f0ea53514dc
+>>>>>>> main
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
