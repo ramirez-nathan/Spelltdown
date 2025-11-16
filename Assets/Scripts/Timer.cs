@@ -20,8 +20,8 @@ public class Timer : MonoBehaviour
     }
     void DisplayTime(float time)
     {
-        float minutes = Mathf.FloorToInt(time / 60);
-        float seconds = Mathf.FloorToInt(time % 60);
-        timerText.text = $"{minutes:00}:{seconds:00}";
+        float seconds = Mathf.FloorToInt(time);
+        GameManager.instance.convertScore(Mathf.FloorToInt(time));
+        timerText.text = $"{seconds}";
     }
 }

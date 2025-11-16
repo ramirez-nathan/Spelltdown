@@ -21,4 +21,5 @@ public class Score : MonoBehaviour
     {
         score.text = "Score: " + GameManager.instance.score.ToString() + "\nBest: " + GameManager.instance.highScore.ToString();
     }
+
 }

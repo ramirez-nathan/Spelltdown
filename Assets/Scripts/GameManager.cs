@@ -47,6 +47,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void convertScore(int s)
+    {
+        score = s;
+    }
+
     public void GoToMenu()
     {
         state = GameState.MENU;
