@@ -1,0 +1,10 @@
+# ninja log v5
+76	4882	7849621829985601	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	390c0c4d7e64e3af
+36	4899	7849621829910079	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	356a01a2a10ef15
+12	4905	7849621830086574	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	3fa34a2dd51e167b
+89	4919	7849621830337857	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a9a7b83ed4a84cfd
+24	4975	7849621831059450	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f902007a75c27b81
+102	5261	7849621833991547	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	75735495bcbef31b
+50	5326	7849621834675912	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	617316ffc293a9d1
+0	5455	7849621835908867	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1c443248b5c08cd
+5456	5646	7849621837890075	C:/Users/tommy/Spelltdown Hackathon/Spelltdown/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/145n2n15/obj/arm64-v8a/libgame.so	fde6618dd1d27078
