@@ -1,5 +1,7 @@
 # Spelltdown
+https://www.youtube.com/watch?v=S2tLmMKlCBM
 
+https://devpost.com/software/speltdown?ref_content=my-projects-tab&ref_feature=my_projects
 ## Team Members
 - Thomas Nguyen - Programmer/Artist
 - Nathan Ramirez - Programmer
